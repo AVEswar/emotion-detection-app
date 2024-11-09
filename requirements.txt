@@ -3,3 +3,4 @@ tensorflow
 numpy
 pandas
 keras
+scikit-learn
