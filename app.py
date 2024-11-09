@@ -3,12 +3,13 @@ import numpy as np
 import pickle
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+import tensorflow as tf
 
-MODEL_PATH = 'emotion_detection.h5'
+# MODEL_PATH = 'emotion_detection.h5'
 TOKENIZER_PATH = 'tokenizer.pkl'
 LABEL_ENCODER_PATH = 'label_encoder.pkl'
 
-model = load_model(MODEL_PATH)
+model = load_model('emotion_detection_model.keras')
 
 with open(TOKENIZER_PATH, 'rb') as handle:
   tokenizer = pickle.load(handle)
